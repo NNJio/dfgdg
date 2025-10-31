@@ -8,8 +8,9 @@ import 'package:help/shared/componets/social_login_button.dart';
 import 'package:help/shared/utils/constants/enums.dart';
 import 'package:help/shared/componets/space.dart';
 import 'package:help/shared/componets/scaffold_customs.dart';
+import 'package:help/shared/componets/push_page.dart';
 
-import '../../select_role/provider/role_provider.dart';
+import '../../../shared/utils/provider/provider.dart';
 
 class LoginPage extends ConsumerWidget {
   const LoginPage({super.key});
@@ -60,9 +61,7 @@ class LoginPage extends ConsumerWidget {
               addVerticalSpace(24.h),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const OtpPage()),
-                  );
+                  go(context, const OtpPage());
                 },
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, 48.h),
@@ -105,9 +104,7 @@ class LoginPage extends ConsumerWidget {
               ),
               addVerticalSpace(8.h),
               InkWell(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => const RegisterPage()),
-                ),
+                onTap: () => go(context, const RegisterPage()),
                 child: Label(
                   'Register',
                   fontSize: 16.sp,

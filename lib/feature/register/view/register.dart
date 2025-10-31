@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:help/shared/utils/constants/provider.dart';
+import 'package:help/shared/utils/provider/route_provider.dart';
 import 'package:help/shared/componets/scaffold_customs.dart';
 import 'package:help/shared/componets/label.dart';
 import 'package:help/shared/componets/space.dart';

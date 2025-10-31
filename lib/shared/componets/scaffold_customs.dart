@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:help/feature/select_role/provider/role_provider.dart';
+import 'package:help/shared/utils/provider/provider.dart';
 
 class ScaffoldCustoms extends ConsumerWidget {
   final PreferredSizeWidget? appBar;

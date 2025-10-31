@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:help/feature/login/view/login.dart';
+import 'package:help/shared/componets/push_page.dart';
 
 import '../../../shared/componets/role_card.dart';
-import '../provider/role_provider.dart';
+import '../../../shared/utils/provider/provider.dart';
 
 class SelectRolePage extends ConsumerWidget {
   const SelectRolePage({super.key});
@@ -13,9 +14,7 @@ class SelectRolePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     void selectRole(bool isHero) {
       ref.read(roleProvider.notifier).state = isHero;
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => const LoginPage()),
-      );
+      go(context, const LoginPage());
     }
 
     return Scaffold(
