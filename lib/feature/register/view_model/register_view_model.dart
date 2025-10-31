@@ -26,7 +26,6 @@ class RegisterViewModel extends ChangeNotifier {
     try {
       await Future.delayed(const Duration(seconds: 2)); // mock API
 
-      // TODO: เชื่อม backend จริง
       isLoading = false;
       notifyListeners();
     } catch (e) {

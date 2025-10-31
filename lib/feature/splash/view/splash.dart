@@ -1,6 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../shared/componets/push_page.dart';
 import '../../select_role/view/select_role.dart';
 
 class SplashPage extends StatefulWidget {
@@ -26,9 +29,7 @@ class _SplashPageState extends State<SplashPage> {
 
     // เปลี่ยนหน้าไป SelectRolePage หลัง 3 วิ
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const SelectRolePage()),
-      );
+      go(context, const SelectRolePage());
     });
   }
 
